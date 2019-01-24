@@ -8,128 +8,98 @@
 		<version>2.1.2.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
 	<groupId>com.stackroute.muzix</groupId>
 	<artifactId>muzix</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Muzix</name>
 	<description>Demo project for Spring Boot</description>
 
+
+
 	<properties>
 		<java.version>1.8</java.version>
+		<spring-cloud.version>Greenwich.RC2</spring-cloud.version>
 	</properties>
+
 	<dependencies>
-		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-		<!--<dependency>-->
-		<!--<groupId>mysql</groupId>-->
-		<!--<artifactId>mysql-connector-java</artifactId>-->
-		<!--<version>8.0.13</version>-->
-		<!--</dependency>-->
-
-		<!--<dependency>-->
-		<!--<groupId>org.springframework.boot</groupId>-->
-		<!--<artifactId>spring-boot-starter-data-jpa</artifactId>-->
-		<!--</dependency>-->
 
 		<dependency>
-			<groupId>org.reactivestreams</groupId>
-			<artifactId>reactive-streams</artifactId>
-			<version>1.0.0</version>
+		<groupId>io.springfox</groupId>
+		<artifactId>springfox-swagger2</artifactId>
+		<version>2.6.1</version>
+		<scope>compile</scope>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+
 		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-core</artifactId>
-			<version>2.9.5</version>
+		<groupId>org.springframework.data</groupId>
+		<artifactId>spring-data-mongodb</artifactId>
+		<version>2.1.3.RELEASE</version>
 		</dependency>
+
+		<dependency>
+		<groupId>org.projectlombok</groupId>
+		<artifactId>lombok</artifactId>
+		<version>1.18.0</version>
+		<scope>provided</scope>
+		</dependency>
+
+
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger2</artifactId>
-			<version>2.6.1</version>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger-ui</artifactId>
-			<version>2.6.1</version>
-			<scope>compile</scope>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver -->
-		<dependency>
-			<groupId>org.mongodb</groupId>
-			<artifactId>mongo-java-driver</artifactId>
-			<version>3.8.2</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>1.18.0</version>
-			<scope>provided</scope>
-		</dependency>
-		<!--<dependency>-->
-		<!--<groupId>de.flapdoodle.embed</groupId>-->
-		<!--<artifactId>de.flapdoodle.embed.mongo</artifactId>-->
-		<!--<scope>test</scope>-->
-		<!--</dependency>-->
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+		</dependency>
 
-		<!--<dependency>-->
-		<!--<groupId>com.h2database</groupId>-->
-		<!--<artifactId>h2</artifactId>-->
-		<!--<scope>runtime</scope>-->
-		<!--</dependency>-->
+
+		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>2.2.11</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.xml.bind</groupId>
+			<artifactId>jaxb-core</artifactId>
+			<version>2.2.11</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.xml.bind</groupId>
+			<artifactId>jaxb-impl</artifactId>
+			<version>2.2.11</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.activation</groupId>
+			<artifactId>activation</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!--For JDK 11, add this to POM and try-->
-
-		<dependency>
-			<groupId>org.javassist</groupId>
-			<artifactId>javassist</artifactId>
-			<version>3.23.1-GA</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
-		<dependency>
-			<groupId>org.mockito</groupId>
-			<artifactId>mockito-all</artifactId>
-			<version>1.9.5</version>
-			<scope>test</scope>
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/eu.codearte.catch-exception/catch-exception -->
-		<dependency>
-			<groupId>eu.codearte.catch-exception</groupId>
-			<artifactId>catch-exception</artifactId>
-			<version>1.4.4</version>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.data</groupId>
-			<artifactId>spring-data-mongodb</artifactId>
-			<version>2.1.3.RELEASE</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-hateoas</artifactId>
-		</dependency>
-		<!--<dependency>-->
-		<!--<groupId>org.springframework.data</groupId>-->
-		<!--<artifactId>spring-data-mongodb</artifactId>-->
-		<!--<version>2.1.3.RELEASE</version>-->
-		<!--</dependency>-->
 	</dependencies>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -139,4 +109,277 @@
 		</plugins>
 	</build>
 
+	<repositories>
+		<repository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/milestone</url>
+		</repository>
+	</repositories>
+
+
+
 </project>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!--<properties>-->
+		<!--<java.version>1.8</java.version>-->
+	<!--</properties>-->
+
+
+	<!--<properties>-->
+		<!--<java.version>1.8</java.version>-->
+		<!--<spring-cloud.version>Greenwich.RC2</spring-cloud.version>-->
+	<!--</properties>-->
+
+	<!--<dependencies>-->
+		<!--&lt;!&ndash; https://mvnrepository.com/artifact/mysql/mysql-connector-java &ndash;&gt;-->
+		<!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+		<!--&lt;!&ndash;<groupId>mysql</groupId>&ndash;&gt;-->
+		<!--&lt;!&ndash;<artifactId>mysql-connector-java</artifactId>&ndash;&gt;-->
+		<!--&lt;!&ndash;<version>8.0.13</version>&ndash;&gt;-->
+		<!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+
+		<!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+		<!--&lt;!&ndash;<groupId>org.springframework.boot</groupId>&ndash;&gt;-->
+		<!--&lt;!&ndash;<artifactId>spring-boot-starter-data-jpa</artifactId>&ndash;&gt;-->
+		<!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+
+		<!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+			<!--&lt;!&ndash;<groupId>org.reactivestreams</groupId>&ndash;&gt;-->
+			<!--&lt;!&ndash;<artifactId>reactive-streams</artifactId>&ndash;&gt;-->
+			<!--&lt;!&ndash;<version>1.0.0</version>&ndash;&gt;-->
+		<!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+
+
+		<!--<dependency>-->
+			<!--<groupId>org.springframework.boot</groupId>-->
+			<!--<artifactId>spring-boot-starter-actuator</artifactId>-->
+		<!--</dependency>-->
+
+
+		<!--<dependency>-->
+			<!--<groupId>org.springframework.cloud</groupId>-->
+			<!--<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>-->
+		<!--</dependency>-->
+
+
+		<!--&lt;!&ndash; https://mvnrepository.com/artifact/com.netflix.eureka/eureka-client &ndash;&gt;-->
+		<!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+			<!--&lt;!&ndash;<groupId>com.netflix.eureka</groupId>&ndash;&gt;-->
+			<!--&lt;!&ndash;<artifactId>eureka-client</artifactId>&ndash;&gt;-->
+			<!--&lt;!&ndash;<version>1.9.9</version>&ndash;&gt;-->
+			<!--&lt;!&ndash;<scope>runtime</scope>&ndash;&gt;-->
+		<!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+
+
+
+		<!--&lt;!&ndash; https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core &ndash;&gt;-->
+		<!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+			<!--&lt;!&ndash;<groupId>com.fasterxml.jackson.core</groupId>&ndash;&gt;-->
+			<!--&lt;!&ndash;<artifactId>jackson-core</artifactId>&ndash;&gt;-->
+			<!--&lt;!&ndash;<version>2.9.5</version>&ndash;&gt;-->
+		<!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+
+
+
+			<!--<dependency>-->
+				<!--<groupId>org.springframework.boot</groupId>-->
+				<!--<artifactId>spring-boot-starter-actuator</artifactId>-->
+			<!--</dependency>-->
+			<!--<dependency>-->
+				<!--<groupId>org.springframework.boot</groupId>-->
+				<!--<artifactId>spring-boot-starter-web</artifactId>-->
+			<!--</dependency>-->
+			<!--<dependency>-->
+				<!--<groupId>org.springframework.cloud</groupId>-->
+				<!--<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>-->
+			<!--</dependency>-->
+
+
+			<!--<dependency>-->
+				<!--<groupId>javax.xml.bind</groupId>-->
+				<!--<artifactId>jaxb-api</artifactId>-->
+				<!--<version>2.2.11</version>-->
+			<!--</dependency>-->
+			<!--<dependency>-->
+				<!--<groupId>com.sun.xml.bind</groupId>-->
+				<!--<artifactId>jaxb-core</artifactId>-->
+				<!--<version>2.2.11</version>-->
+			<!--</dependency>-->
+			<!--<dependency>-->
+				<!--<groupId>com.sun.xml.bind</groupId>-->
+				<!--<artifactId>jaxb-impl</artifactId>-->
+				<!--<version>2.2.11</version>-->
+			<!--</dependency>-->
+			<!--<dependency>-->
+				<!--<groupId>javax.activation</groupId>-->
+				<!--<artifactId>activation</artifactId>-->
+				<!--<version>1.1.1</version>-->
+			<!--</dependency>-->
+
+			<!--<dependency>-->
+				<!--<groupId>org.springframework.boot</groupId>-->
+				<!--<artifactId>spring-boot-starter-test</artifactId>-->
+				<!--<scope>test</scope>-->
+			<!--</dependency>-->
+
+		<!--</dependencies>-->
+
+		<!--<dependencyManagement>-->
+			<!--<dependencies>-->
+				<!--<dependency>-->
+					<!--<groupId>org.springframework.cloud</groupId>-->
+					<!--<artifactId>spring-cloud-dependencies</artifactId>-->
+					<!--<version>${spring-cloud.version}</version>-->
+					<!--<type>pom</type>-->
+					<!--<scope>import</scope>-->
+				<!--</dependency>-->
+			<!--</dependencies>-->
+		<!--</dependencyManagement>-->
+
+
+
+		<!--<dependency>-->
+			<!--<groupId>org.springframework.boot</groupId>-->
+			<!--<artifactId>spring-boot-starter-data-mongodb</artifactId>-->
+		<!--</dependency>-->
+		<!--<dependency>-->
+			<!--<groupId>io.springfox</groupId>-->
+			<!--<artifactId>springfox-swagger2</artifactId>-->
+			<!--<version>2.6.1</version>-->
+			<!--<scope>compile</scope>-->
+		<!--</dependency>-->
+		<!--<dependency>-->
+			<!--<groupId>io.springfox</groupId>-->
+			<!--<artifactId>springfox-swagger-ui</artifactId>-->
+			<!--<version>2.6.1</version>-->
+			<!--<scope>compile</scope>-->
+		<!--</dependency>-->
+		<!--&lt;!&ndash; https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver &ndash;&gt;-->
+		<!--<dependency>-->
+			<!--<groupId>org.mongodb</groupId>-->
+			<!--<artifactId>mongo-java-driver</artifactId>-->
+			<!--<version>3.8.2</version>-->
+		<!--</dependency>-->
+		<!--&lt;!&ndash; https://mvnrepository.com/artifact/org.projectlombok/lombok &ndash;&gt;-->
+		<!--<dependency>-->
+			<!--<groupId>org.projectlombok</groupId>-->
+			<!--<artifactId>lombok</artifactId>-->
+			<!--<version>1.18.0</version>-->
+			<!--<scope>provided</scope>-->
+		<!--</dependency>-->
+		<!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+		<!--&lt;!&ndash;<groupId>de.flapdoodle.embed</groupId>&ndash;&gt;-->
+		<!--&lt;!&ndash;<artifactId>de.flapdoodle.embed.mongo</artifactId>&ndash;&gt;-->
+		<!--&lt;!&ndash;<scope>test</scope>&ndash;&gt;-->
+		<!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+
+		<!--<dependency>-->
+			<!--<groupId>org.springframework.boot</groupId>-->
+			<!--<artifactId>spring-boot-starter-web</artifactId>-->
+		<!--</dependency>-->
+
+		<!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+		<!--&lt;!&ndash;<groupId>com.h2database</groupId>&ndash;&gt;-->
+		<!--&lt;!&ndash;<artifactId>h2</artifactId>&ndash;&gt;-->
+		<!--&lt;!&ndash;<scope>runtime</scope>&ndash;&gt;-->
+		<!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+		<!--<dependency>-->
+			<!--<groupId>org.springframework.boot</groupId>-->
+			<!--<artifactId>spring-boot-starter-test</artifactId>-->
+			<!--<scope>test</scope>-->
+		<!--</dependency>-->
+		<!--&lt;!&ndash;For JDK 11, add this to POM and try&ndash;&gt;-->
+
+		<!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+			<!--&lt;!&ndash;<groupId>org.javassist</groupId>&ndash;&gt;-->
+			<!--&lt;!&ndash;<artifactId>javassist</artifactId>&ndash;&gt;-->
+			<!--&lt;!&ndash;<version>3.23.1-GA</version>&ndash;&gt;-->
+		<!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+		<!--&lt;!&ndash; https://mvnrepository.com/artifact/org.mockito/mockito-all &ndash;&gt;-->
+		<!--<dependency>-->
+			<!--<groupId>org.mockito</groupId>-->
+			<!--<artifactId>mockito-all</artifactId>-->
+			<!--<version>1.9.5</version>-->
+			<!--<scope>test</scope>-->
+		<!--</dependency>-->
+
+		<!--&lt;!&ndash; https://mvnrepository.com/artifact/eu.codearte.catch-exception/catch-exception &ndash;&gt;-->
+		<!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+			<!--&lt;!&ndash;<groupId>eu.codearte.catch-exception</groupId>&ndash;&gt;-->
+			<!--&lt;!&ndash;<artifactId>catch-exception</artifactId>&ndash;&gt;-->
+			<!--&lt;!&ndash;<version>1.4.4</version>&ndash;&gt;-->
+			<!--&lt;!&ndash;<scope>test</scope>&ndash;&gt;-->
+		<!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+
+		<!--<dependency>-->
+			<!--<groupId>org.springframework.data</groupId>-->
+			<!--<artifactId>spring-data-mongodb</artifactId>-->
+			<!--<version>2.1.3.RELEASE</version>-->
+		<!--</dependency>-->
+		<!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+			<!--&lt;!&ndash;<groupId>org.springframework.boot</groupId>&ndash;&gt;-->
+			<!--&lt;!&ndash;<artifactId>spring-boot-starter-hateoas</artifactId>&ndash;&gt;-->
+		<!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+		<!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+		<!--&lt;!&ndash;<groupId>org.springframework.data</groupId>&ndash;&gt;-->
+		<!--&lt;!&ndash;<artifactId>spring-data-mongodb</artifactId>&ndash;&gt;-->
+		<!--&lt;!&ndash;<version>2.1.3.RELEASE</version>&ndash;&gt;-->
+		<!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+	<!--</dependencies>-->
+
+
+	<!--&lt;!&ndash;<dependencyManagement>&ndash;&gt;-->
+		<!--&lt;!&ndash;<dependencies>&ndash;&gt;-->
+			<!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+				<!--&lt;!&ndash;<groupId>org.springframework.cloud</groupId>&ndash;&gt;-->
+				<!--&lt;!&ndash;<artifactId>spring-cloud-dependencies</artifactId>&ndash;&gt;-->
+				<!--&lt;!&ndash;<version>${spring-cloud.version}</version>&ndash;&gt;-->
+				<!--&lt;!&ndash;<type>pom</type>&ndash;&gt;-->
+				<!--&lt;!&ndash;<scope>import</scope>&ndash;&gt;-->
+			<!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+		<!--&lt;!&ndash;</dependencies>&ndash;&gt;-->
+	<!--&lt;!&ndash;</dependencyManagement>&ndash;&gt;-->
+	<!--<build>-->
+		<!--<plugins>-->
+			<!--<plugin>-->
+				<!--<groupId>org.springframework.boot</groupId>-->
+				<!--<artifactId>spring-boot-maven-plugin</artifactId>-->
+			<!--</plugin>-->
+		<!--</plugins>-->
+	<!--</build>-->
+
+	<!--<repositories>-->
+		<!--<repository>-->
+			<!--<id>spring-milestones</id>-->
+			<!--<name>Spring Milestones</name>-->
+			<!--<url>https://repo.spring.io/milestone</url>-->
+		<!--</repository>-->
+	<!--</repositories>-->
+
+
+
+	<!--&lt;!&ndash;<build>&ndash;&gt;-->
+		<!--&lt;!&ndash;<plugins>&ndash;&gt;-->
+			<!--&lt;!&ndash;<plugin>&ndash;&gt;-->
+				<!--&lt;!&ndash;<groupId>org.springframework.boot</groupId>&ndash;&gt;-->
+				<!--&lt;!&ndash;<artifactId>spring-boot-maven-plugin</artifactId>&ndash;&gt;-->
+			<!--&lt;!&ndash;</plugin>&ndash;&gt;-->
+		<!--&lt;!&ndash;</plugins>&ndash;&gt;-->
+	<!--&lt;!&ndash;</build>&ndash;&gt;-->
+
